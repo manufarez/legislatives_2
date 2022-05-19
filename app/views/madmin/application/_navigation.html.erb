@@ -1,0 +1,36 @@
+<div class="flex flex-col h-full text-sm" data-controller="dropdown">
+  <div class="flex items-center justify-between md:block">
+    <div class="flex items-center md:block">
+      <h1 class="mr-2 text-xl font-semibold md:p-2"><%= Candidat.first.prenom + ' ' + Candidat.first.nom %></h1>
+      <% if main_app.respond_to?(:root_url) %>
+        <%= link_to main_app.root_url, class: "block p-2 rounded hover:bg-gray-200", data: { turbo: false } do %>
+          ← Voir <span class="hidden md:inline">le site</span>
+        <% end %>
+      <% end %>
+    </div>
+
+    <div class="flex items-center -mr-2 md:hidden">
+      <button data-action="click->dropdown#toggle touch->dropdown#toggle click@window->dropdown#hide touch@window#dropdown->hide" type="button" class="inline-flex items-center justify-center p-2 text-gray-400 bg-white rounded-md hover:bg-gray-200 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white" id="main-menu" aria-haspopup="true">
+        <span class="sr-only">Open main menu</span>
+        <!-- Heroicon name: outline/menu -->
+        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="flex-col justify-between flex-grow hidden md:flex" data-dropdown-target="menu">
+    <% Madmin.resources.each do |resource| %>
+      <% if resource.friendly_name == "Le vote" || resource.friendly_name == "Programme" || resource.friendly_name == "Slogan" %>
+        <%= nav_link_to resource.friendly_name, resource.index_path, class: "block p-2 rounded hover:bg-gray-100", starts_with: resource.index_path, active_class: "font-bold text-black" %>
+      <% else %>
+        <%= nav_link_to resource.friendly_name.pluralize, resource.index_path, class: "block p-2 rounded hover:bg-gray-100", starts_with: resource.index_path, active_class: "font-bold text-black" %>
+      <% end %>
+    <% end %>
+
+    <div class="mt-auto">
+      <%= link_to "ASFE", "https://alliancesolidaire.org/", target: :_blank, class: "block p-2 rounded text-gray-500 hover:bg-gray-100" %>
+    </div>
+  </div>
+</div>

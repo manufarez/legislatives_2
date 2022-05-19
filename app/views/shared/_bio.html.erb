@@ -1,15 +1,18 @@
-<div class="self-center max-w-5xl px-8 py-6 mb-2 bg-gray-800 group md:rounded-xl">
-  <span class="text-xs font-medium tracking-wider text-gray-600 uppercase">biographie de candidat</span>
-  <h3 class="mb-3 text-3xl font-bold text-gray-200">Born to win and get votes.</h3>
-  <p class="mb-6 leading-relaxed text-gray-200">Lorem ipsum dolor sit amet. Quo corporis enim est galisum veritatis ab tenetur ducimus et tenetur consequatur. In rerum dolore sed omnis doloremque ut repellendus blanditiis ut doloremque galisum ad obcaecati molestiae. Ut quae ullam et nulla neque non dolores obcaecati ab impedit dolor!
-Vel sapiente reprehenderit ut sint dolor in iusto reprehenderit qui reiciendis dolorem? Eos nostrum fugit sit modi omnis aut atque vero cum corrupti harum. Et atque voluptatem sed voluptatum perspiciatis id consequatur inventore qui vitae ipsum et minima quia in excepturi totam id placeat officiis. Qui galisum amet ad omnis facere qui eveniet eius nam illum sint!
-Aut natus nihil aut rerum quibusdam in unde repudiandae ut sunt laudantium vel excepturi expedita qui alias omnis ut nostrum veritatis. Et pariatur consequuntur aut dicta ipsa et galisum commodi.</p>
+<%= link_to "/qui-sommes-nous", class:'self-center' do  %>
+  <div class="max-w-5xl px-8 py-6 mb-2 bg-gray-800 group md:rounded-xl">
 
-  <span class="text-xs font-medium tracking-wider text-gray-600 uppercase">biographie de suppléant</span>
-  <h3 class="mb-3 text-3xl font-bold text-gray-200">Always winning, just need your vote.</h3>
-  <p class="mb-3 leading-relaxed text-gray-200">Lorem ipsum dolor sit amet. Quo corporis enim est galisum veritatis ab tenetur ducimus et tenetur consequatur. In rerum dolore sed omnis doloremque ut repellendus blanditiis ut doloremque galisum ad obcaecati molestiae. Ut quae ullam et nulla neque non dolores obcaecati ab impedit dolor!
-Vel sapiente reprehenderit ut sint dolor in iusto reprehenderit qui reiciendis dolorem?</p>
-  <div class="transition duration-500 ease-in-out transform group-hover:translate-x-1">
-    <span class="font-medium text-gray-500">En savoir plus →</span>
+    <% Candidat.all.each do |candidat| %>
+      <span class="text-xs font-medium tracking-wider text-gray-600 uppercase"><%= candidat.prenom + ' ' + candidat.nom %> - <%= candidat.position == 1 ? 'candidat' : 'suppléant' %></span>
+      <div class="flex items-center my-3">
+        <%= image_tag candidat.photo, class:'flex-none object-cover rounded-full w-14 h-14 mr-3' %>
+        <h3 class="text-3xl font-bold text-gray-200">«<%= candidat.citation %>»</h3>
+      </div>
+      <p class="mb-6 leading-relaxed text-gray-200"><%= candidat.bio_summary %></p>
+    <% end %>
+
+
+    <div class="transition duration-500 ease-in-out transform group-hover:translate-x-1">
+      <span class="font-medium text-gray-500">En savoir plus →</span>
+    </div>
   </div>
-</div>
+<% end %>

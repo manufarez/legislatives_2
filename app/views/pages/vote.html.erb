@@ -1,0 +1,23 @@
+<div class="flex-grow animated fadeIn">
+  <div class="px-8 pt-12 mx-auto mb-12 max-w-7xl">
+
+    <div class="transition duration-500 ease-in-out transform mb-14 hover:-translate-x-1"><%= link_to '← Retour', root_path, class:"text-gray-500" %></div>
+
+    <div class="max-w-6xl mx-auto">
+      <div class="flex items-center justify-between mb-6">
+        <h3 class="text-5xl font-bold text-gray-100"><%= Vote.first.titre %></h3>
+      </div>
+      <p class="pb-16 text-xl font-medium leading-relaxed text-gray-100">
+        <%= Vote.first.introduction %>
+      </p>
+    </div>
+
+
+    <div class="mx-auto text-lg text-gray-200 max-w-7xl">
+      <%= Vote.first.contenu %>
+    </div>
+
+
+    <div class="mt-24 transition duration-500 ease-in-out transform hover:-translate-x-1"><%= link_to '← Retour', root_path, class:"text-gray-500" %></div>
+  </div>
+</div>

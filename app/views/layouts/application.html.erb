@@ -16,7 +16,9 @@
 
   <body class="bg-gray-900">
     <%= render 'shared/navbar' %>
-    <%= render 'shared/hero' %>
+    <% if current_page?(root_path) %>
+      <%= render 'shared/hero' %>
+    <% end %>
     <main class="container flex flex-col mx-auto mt-20">
       <%= yield %>
     </main>

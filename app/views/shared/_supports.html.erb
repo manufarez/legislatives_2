@@ -1,61 +1,21 @@
 <div class="mb-12">
   <h2 class="mt-16 mb-6 text-4xl font-bold text-center text-gray-100">Ils nous soutiennent</h2>
   <ul class="space-y-4 overflow-scroll md:space-y-0 md:space-x-8 md:flex">
-    <li class="text-sm leading-6 min-w-fit">
-      <figure class="relative flex flex-col-reverse p-6 md:rounded-lg md:bg-slate-800 highlight-white/5">
-        <blockquote class="max-w-lg mt-6 text-slate-300"><p>Je laisse le soin à l'ASFE de trouver la bonne formule qui me permettra de soutenir ce candidat.</p></blockquote>
-        <figcaption class="flex items-center space-x-4">
-          <%= image_tag "https://picsum.photos/100", class:'flex-none object-cover rounded-full w-14 h-14' %>
-          <div class="flex-auto">
-              <div class="text-base font-semibold text-slate-300">
-                Jean-Baptiste Quelquechose
-              </div>
-              <div class="mt-0.5 text-white">Président du conseil régional de NA</div>
-          </div>
-        </figcaption>
-      </figure>
-    </li>
-    <li class="text-sm leading-6 min-w-fit">
-      <figure class="relative flex flex-col-reverse p-6 md:rounded-lg md:bg-slate-800 highlight-white/5">
-        <blockquote class="max-w-lg mt-6 text-slate-300"><p>Je laisse le soin à l'ASFE de trouver la bonne formule qui me permettra de soutenir ce candidat.</p></blockquote>
-        <figcaption class="flex items-center space-x-4">
-          <%= image_tag "https://picsum.photos/100", class:'flex-none object-cover rounded-full w-14 h-14' %>
-          <div class="flex-auto">
-              <div class="text-base font-semibold text-slate-300">
-                Jean-Baptiste Quelquechose
-              </div>
-              <div class="mt-0.5 text-white">Président du conseil régional de NA</div>
-          </div>
-        </figcaption>
-      </figure>
-    </li>
-    <li class="text-sm leading-6 min-w-fit">
-      <figure class="relative flex flex-col-reverse p-6 md:rounded-lg md:bg-slate-800 highlight-white/5">
-        <blockquote class="max-w-lg mt-6 text-slate-300"><p>Je laisse le soin à l'ASFE de trouver la bonne formule qui me permettra de soutenir ce candidat.</p></blockquote>
-        <figcaption class="flex items-center space-x-4">
-          <%= image_tag "https://picsum.photos/100", class:'flex-none object-cover rounded-full w-14 h-14' %>
-          <div class="flex-auto">
-              <div class="text-base font-semibold text-slate-300">
-                Jean-Baptiste Quelquechose
-              </div>
-              <div class="mt-0.5 text-white">Président du conseil régional de NA</div>
-          </div>
-        </figcaption>
-      </figure>
-    </li>
-    <li class="text-sm leading-6 min-w-fit">
-      <figure class="relative flex flex-col-reverse p-6 md:rounded-lg md:bg-slate-800 highlight-white/5">
-        <blockquote class="max-w-lg mt-6 text-slate-300"><p>Je laisse le soin à l'ASFE de trouver la bonne formule qui me permettra de soutenir ce candidat.</p></blockquote>
-        <figcaption class="flex items-center space-x-4">
-          <%= image_tag "https://picsum.photos/100", class:'flex-none object-cover rounded-full w-14 h-14' %>
-          <div class="flex-auto">
-              <div class="text-base font-semibold text-slate-300">
-                Jean-Baptiste Quelquechose
-              </div>
-              <div class="mt-0.5 text-white">Président du conseil régional de NA</div>
-          </div>
-        </figcaption>
-      </figure>
-    </li>
+    <% Soutien.all.each do |soutien| %>
+      <li class="text-sm leading-6 min-w-fit">
+        <figure class="relative flex flex-col-reverse p-6 md:rounded-lg md:bg-slate-800 highlight-white/5">
+          <blockquote class="max-w-lg mt-6 text-slate-300"><p><%= soutien.citation %></p></blockquote>
+          <figcaption class="flex items-center space-x-4">
+            <%= image_tag soutien.photo, class:'flex-none object-cover rounded-full w-14 h-14' %>
+            <div class="flex-auto">
+                <div class="text-base font-semibold text-slate-300">
+                  <%= soutien.nom %>
+                </div>
+                <div class="mt-0.5 text-white"><%= soutien.intitule %></div>
+            </div>
+          </figcaption>
+        </figure>
+      </li>
+    <% end %>
   </ul>
 </div>

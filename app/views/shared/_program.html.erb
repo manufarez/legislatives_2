@@ -1,62 +1,26 @@
 <div class="px-8 mb-20 pt-14">
   <div class="mb-10 text-center">
-    <p class="mb-2 font-bold tracking-wide uppercase text-sky-400">Les points forts du programme</p>
-    <h2 class="mb-6 text-4xl font-bold text-gray-800 dark:text-gray-100">Un programme choc</h2>
-    <p class="text-xl text-gray-400">Une intro pour signifier à quel point ce programme sort de l'ordinaire. <br> Très cher au candidat, il a été pensé minutieusement par les équipes de l'ASFE.</p>
+    <p class="mb-2 font-bold tracking-wide uppercase text-sky-400">Notre programme</p>
+    <h2 class="mb-6 text-4xl font-bold text-gray-800 dark:text-gray-100"><%= Programme.first.titre %></h2>
+    <p class="text-xl text-gray-400"><%= Programme.first.sous_titre %></p>
   </div>
   <div class="max-w-4xl pb-4 mx-auto mt-10">
       <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-        <div class="flex">
-          <div class="flex-shrink-0">
-          </div>
-          <div class="ml-4">
-            <div class="text-lg font-medium leading-6 text-gray-100">
-              Un premier point de programme super
-            </div>
-            <div class="mt-2 text-base text-gray-400">
-              Eos quia commodi hic mollitia cupiditate et ipsum illo et inventore illum et quaerat pariatur et tempora consequatur vel animi sunt. Et laudantium illo quae reiciendis est molestiae laborum aut neque aspernatur qui consequatur nobis ut saepe eaque. Eum nulla numquam non aliquam dolor id minima nisi in quae ipsa.
-            </div>
-          </div>
-        </div>
-        <div class="flex">
-          <div class="flex-shrink-0">
-          </div>
-          <div class="ml-4">
-            <div class="text-lg font-medium leading-6 text-gray-100">
-              Un deuxième point de programme étonnant
-            </div>
-            <div class="mt-2 text-base text-gray-400">
-              Eos quia commodi hic mollitia cupiditate et ipsum illo et inventore illum et quaerat pariatur et tempora consequatur vel animi sunt. Et laudantium illo quae reiciendis est molestiae laborum aut neque aspernatur qui consequatur nobis ut saepe eaque. Eum nulla numquam non aliquam dolor id minima nisi in quae ipsa.
+        <% Proposition.first(4).each do |proposition| %>
+          <div class="flex">
+            <div class="ml-4">
+              <div class="text-lg font-medium leading-6 text-gray-100">
+                <%= proposition.titre %>
+              </div>
+              <div class="mt-2 text-base text-gray-400">
+                <%= proposition.contenu %>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="flex">
-          <div class="flex-shrink-0">
-          </div>
-          <div class="ml-4">
-            <div class="text-lg font-medium leading-6 text-gray-100">
-              Un troisième point de programme bluffant
-            </div>
-            <div class="mt-2 text-base text-gray-400">
-              Eos quia commodi hic mollitia cupiditate et ipsum illo et inventore illum et quaerat pariatur et tempora consequatur vel animi sunt. Et laudantium illo quae reiciendis est molestiae laborum aut neque aspernatur qui consequatur nobis ut saepe eaque. Eum nulla numquam non aliquam dolor id minima nisi in quae ipsa.
-            </div>
-          </div>
-        </div>
-        <div class="flex">
-          <div class="flex-shrink-0">
-          </div>
-          <div class="ml-4">
-            <div class="text-lg font-medium leading-6 text-gray-100">
-              Un dernier point de programme décoiffant
-            </div>
-            <div class="mt-2 text-base text-gray-400">
-              Eos quia commodi hic mollitia cupiditate et ipsum illo et inventore illum et quaerat pariatur et tempora consequatur vel animi sunt. Et laudantium illo quae reiciendis est molestiae laborum aut neque aspernatur qui consequatur nobis ut saepe eaque. Eum nulla numquam non aliquam dolor id minima nisi in quae ipsa.
-            </div>
-          </div>
-        </div>
+        <% end %>
       </div>
     </div>
-<div class="flex justify-center mt-6 space-x-6 sm:mt-10">
-  <a class="flex items-center justify-center w-full h-12 px-6 font-semibold text-white rounded-lg hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400">En savoir plus</a>
+<div class="flex justify-center mt-6 space-x-6 sm:mt-10 hover:cursor-pointer">
+  <a href="/programme" class="flex items-center justify-center w-full h-12 px-6 font-semibold text-white rounded-lg hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400">En savoir plus</a>
 </div>
 </div>

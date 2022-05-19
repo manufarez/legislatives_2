@@ -3,12 +3,12 @@
   <div class="absolute inset-0 flex items-center justify-center w-full bg-gray-900/40">
         <div class="flex-col items-center justify-center w-11/12 mb-5 sm:w-2/3 lg:flex sm:mb-10">
             <h2 class="text-4xl font-black leading-relaxed text-center text-white md:text-4xl lg:text-5xl xl:text-6xl">
-                Avec un tel site,<br>c'est sûr qu'on gagne.
+              <%= Slogan.first.principal %>
             </h2>
         </div>
     </div>
   </div>
 </div>
 <h3 class="max-w-6xl px-4 mx-auto mt-16 text-4xl font-bold text-center text-gray-100">
-  Il n'y a qu'une façon de convaincre l'électorat et c'est d'utiliser des <span class="text-pink-400">citations inspirantes</span> placées au bon endroit.
+  <%= Slogan.first.secondaire %>
 </h3>
