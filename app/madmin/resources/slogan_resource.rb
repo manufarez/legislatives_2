@@ -3,6 +3,7 @@ class SloganResource < Madmin::Resource
   attribute :id, form: false
   attribute :principal
   attribute :secondaire
+  attribute :image_homepage
   #attribute :created_at, form: false
   attribute :updated_at, form: false
 
@@ -21,4 +22,8 @@ class SloganResource < Madmin::Resource
   # def self.default_sort_direction
   #   "desc"
   # end
+
+  def self.friendly_name
+    "Slogan et bannière"
+  end
 end
