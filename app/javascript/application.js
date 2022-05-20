@@ -3,3 +3,8 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "trix"
 import "@rails/actiontext"
+
+document.addEventListener("turbo:load", function() {
+  console.log('It works on each visit!');
+  document.querySelector(".trix-button-group--file-tools").remove();
+});

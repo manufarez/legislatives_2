@@ -1,0 +1,6 @@
+<div class="flex-shrink-0 block text-gray-700 md:inline-block md:w-32">
+  <%= render "madmin/shared/label", form: form, field: field %>
+</div>
+<div class="flex-1 trix-content" style="trix-toolbar.trix-button-row.trix-button-group.trix-button-group--file-tools{display:none;}">
+  <%= form.rich_text_area field.attribute_name, class: "form-input block" %>
+</div>
