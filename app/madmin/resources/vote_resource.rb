@@ -4,7 +4,7 @@ class VoteResource < Madmin::Resource
   attribute :titre
   attribute :introduction
   attribute :contenu
-  attribute :created_at, form: false
+  #attribute :created_at, form: false
   attribute :updated_at, form: false
 
   # Associations
@@ -19,7 +19,11 @@ class VoteResource < Madmin::Resource
   #   "created_at"
   # end
   #
-  # def self.default_sort_direction
-  #   "desc"
-  # end
+  def self.default_sort_direction
+    "desc"
+  end
+
+  def self.friendly_name
+    "Le vote"
+  end
 end

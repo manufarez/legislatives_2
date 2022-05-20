@@ -3,7 +3,7 @@ class PropositionResource < Madmin::Resource
   attribute :id, form: false
   attribute :titre
   attribute :contenu
-  attribute :created_at, form: false
+  #attribute :created_at, form: false
   attribute :updated_at, form: false
   attribute :contenu
 
