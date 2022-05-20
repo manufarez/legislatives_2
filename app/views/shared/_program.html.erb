@@ -1,18 +1,18 @@
 <div class="px-8 mb-20 pt-14">
   <div class="mb-10 text-center">
-    <p class="mb-2 font-bold tracking-wide uppercase text-sky-400">Notre programme</p>
-    <h2 class="mb-6 text-4xl font-bold text-gray-800 dark:text-gray-100"><%= Programme.first.titre %></h2>
-    <p class="text-xl text-gray-400"><%= Programme.first.sous_titre %></p>
+    <p class="mb-2 font-bold tracking-wide uppercase text-asfe-yellow">Notre programme</p>
+    <h2 class="mb-6 text-4xl font-bold text-gray-100"><%= Programme.first.titre %></h2>
+    <p class="text-xl text-gray-300"><%= Programme.first.sous_titre %></p>
   </div>
   <div class="max-w-4xl pb-4 mx-auto mt-10">
       <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
         <% Proposition.first(4).each do |proposition| %>
           <div class="flex">
             <div class="ml-4">
-              <div class="text-lg font-medium leading-6 text-gray-100">
+              <div class="text-lg font-medium leading-6 text-white">
                 <%= proposition.titre %>
               </div>
-              <div class="mt-2 text-base text-gray-400">
+              <div class="mt-2 text-base text-gray-300">
                 <%= proposition.contenu %>
               </div>
             </div>
@@ -21,6 +21,6 @@
       </div>
     </div>
 <div class="flex justify-center mt-6 space-x-6 sm:mt-10 hover:cursor-pointer">
-  <a href="/programme" class="flex items-center justify-center w-full h-12 px-6 font-semibold text-white rounded-lg hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400">En savoir plus</a>
+  <a href="/programme" class="flex items-center justify-center w-full h-12 px-6 font-semibold text-white rounded-lg hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 sm:w-auto dark:bg-asfe-green dark:highlight-white/20 dark:hover:bg-emerald-600">En savoir plus</a>
 </div>
 </div>

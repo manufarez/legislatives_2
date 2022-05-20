@@ -1,7 +1,7 @@
-<nav class="px-2 py-4 bg-gray-800 border-gray-200 sm:px-4">
+<nav class="px-2 py-4 border-gray-200 bg-asfe-blue-dark sm:px-4">
   <div class="container flex flex-wrap items-center justify-between mx-auto">
     <a href="/" class="flex items-center">
-        <span class="self-center ml-2 text-2xl font-black text-white whitespace-nowrap"><% c = Candidat.first %><%= c.prenom + ' ' + c.nom.upcase + ' ' %><span class="text-sky-500">2022</span></span>
+        <span class="self-center ml-2 text-2xl font-black text-white whitespace-nowrap"><% c = Candidat.first %><%= c.prenom + ' ' + c.nom.upcase + ' ' %><span class="text-asfe-blue-light">2022</span></span>
     </a>
     <button data-collapse-toggle="mobile-menu" type="button" class="inline-flex items-center p-2 ml-3 text-sm text-gray-400 rounded-lg md:hidden focus:outline-none focus:ring-2 hover:bg-gray-700 focus:ring-gray-600" aria-controls="mobile-menu" aria-expanded="false" onclick="e = document.getElementById('mobile-menu'); e.classList.toggle('hidden');">
       <span class="sr-only">Open main menu</span>
@@ -11,19 +11,19 @@
     <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
       <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
         <li>
-          <a href="/qui-sommes-nous" class="block py-2 pl-3 pr-4 text-gray-400 border-b border-gray-700 md:border-0 md:p-0 md:hover:text-white hover:bg-gray-700 hover:text-white">Qui sommes-nous?</a>
+          <a href="/qui-sommes-nous" class="block py-2 pl-3 pr-4 text-gray-200 border-b border-gray-700 md:border-0 md:p-0 md:hover:text-white hover:underline hover:text-white">Qui sommes-nous?</a>
         </li>
         <li>
-          <a href="/le-vote" class="block py-2 pl-3 pr-4 text-gray-400 border-b border-gray-700 md:border-0 md:p-0 md:hover:text-white hover:bg-gray-700 hover:text-white">Le vote</a>
+          <a href="/le-vote" class="block py-2 pl-3 pr-4 text-gray-200 border-b border-gray-700 md:border-0 md:p-0 md:hover:text-white hover:underline hover:text-white">Le vote</a>
         </li>
         <li>
-          <a href="/#contact" class="block py-2 pl-3 pr-4 text-gray-400 border-b border-gray-700 md:border-0 md:p-0 md:hover:text-white hover:bg-gray-700 hover:text-white">Contact</a>
+          <a href="/#contact" class="block py-2 pl-3 pr-4 text-gray-200 border-b border-gray-700 md:border-0 md:p-0 md:hover:text-white hover:underline hover:text-white">Contact</a>
         </li>
         <li>
-          <a href="https://alliancesolidaire.org/quest-ce-que-lasfe/" target="_blank" class="block py-2 pl-3 pr-4 text-gray-400 border-b border-gray-700 md:border-0 md:p-0 md:hover:text-white hover:bg-gray-700 hover:text-white">L’ASFE</a>
+          <a href="https://alliancesolidaire.org/quest-ce-que-lasfe/" target="_blank" class="block py-2 pl-3 pr-4 text-gray-200 border-b border-gray-700 md:border-0 md:p-0 md:hover:text-white hover:underline hover:text-white">L’ASFE</a>
         </li>
         <li>
-          <a href="https://alliancesolidaire.org/rejoindre-lasfe/" target="_blank" class="block py-2 pl-3 pr-4 text-gray-400 md:border-0 md:p-0 md:hover:text-white hover:bg-gray-700 hover:text-white">Nous rejoindre</a>
+          <a href="https://alliancesolidaire.org/rejoindre-lasfe/" target="_blank" class="block py-2 pl-3 pr-4 text-gray-200 md:border-0 md:p-0 md:hover:text-white hover:underline hover:text-white">Nous rejoindre</a>
         </li>
       </ul>
     </div>

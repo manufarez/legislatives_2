@@ -1,18 +1,18 @@
 <%= link_to "/qui-sommes-nous", class:'self-center' do  %>
-  <div class="max-w-5xl px-8 py-6 mb-2 bg-gray-800 group md:rounded-xl">
+  <div class="max-w-5xl px-8 py-6 mb-2 bg-gray-100 group md:rounded-xl">
 
     <% Candidat.all.each do |candidat| %>
-      <span class="text-xs font-medium tracking-wider text-gray-600 uppercase"><%= candidat.prenom + ' ' + candidat.nom %> - <%= candidat.position == 1 ? 'candidat' : 'suppléant' %></span>
+      <span class="text-xs font-bold tracking-wider text-gray-500 uppercase"><%= candidat.prenom + ' ' + candidat.nom %> - <%= candidat.position == 1 ? 'candidat' : 'suppléant' %></span>
       <div class="flex items-center my-3">
         <%= image_tag candidat.photo, class:'flex-none object-cover rounded-full w-14 h-14 mr-3' %>
-        <h3 class="text-3xl font-bold text-gray-200">«<%= candidat.citation %>»</h3>
+        <h3 class="text-3xl font-bold tracking-tight text-asfe-blue">«<%= candidat.citation %>»</h3>
       </div>
-      <p class="mb-6 leading-relaxed text-gray-200"><%= candidat.bio_summary %></p>
+      <p class="mb-6 font-medium leading-relaxed text-gray-700"><%= candidat.bio_summary %></p>
     <% end %>
 
 
     <div class="transition duration-500 ease-in-out transform group-hover:translate-x-1">
-      <span class="font-medium text-gray-500">En savoir plus →</span>
+      <span class="font-medium text-asfe-blue-light">En savoir plus →</span>
     </div>
   </div>
 <% end %>

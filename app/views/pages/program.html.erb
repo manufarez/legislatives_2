@@ -1,11 +1,11 @@
 <div class="flex-grow animated fadeIn">
   <div class="px-8 pt-12 mx-auto mb-12 max-w-7xl">
 
-    <div class="transition duration-500 ease-in-out transform mb-14 hover:-translate-x-1"><%= link_to '← Retour', root_path, class:"text-gray-500" %></div>
+    <div class="transition duration-500 ease-in-out transform mb-14 hover:-translate-x-1"><%= link_to '← Retour', root_path, class:"text-asfe-blue-light" %></div>
 
     <div class="text-center max-w-7xl">
       <h3 class="mb-4 text-5xl font-bold text-gray-100"><%= Programme.first.titre %></h3>
-      <p class="pb-16 text-2xl font-medium leading-relaxed text-gray-400"><%= Programme.first.sous_titre %></p>
+      <p class="pb-16 text-2xl font-medium leading-relaxed text-asfe-green-light"><%= Programme.first.sous_titre %></p>
     </div>
 
     <% Proposition.all.each do |proposition| %>
@@ -13,12 +13,12 @@
         <div class="mb-4 text-xl font-medium leading-6 text-gray-100">
           <%= proposition.titre %>
         </div>
-        <div class="mx-auto text-gray-400 text-md max-w-7xl">
+        <div class="mx-auto text-gray-300 text-md max-w-7xl">
           <%= proposition.contenu %>
         </div>
       </div>
     <% end %>
 
-    <div class="mt-24 transition duration-500 ease-in-out transform hover:-translate-x-1"><%= link_to '← Retour', root_path, class:"text-gray-500" %></div>
+    <div class="mt-24 transition duration-500 ease-in-out transform hover:-translate-x-1"><%= link_to '← Retour', root_path, class:"text-asfe-blue-light" %></div>
   </div>
 </div>
