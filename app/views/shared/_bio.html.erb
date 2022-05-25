@@ -1,7 +1,7 @@
 <%= link_to "/qui-sommes-nous", class:'self-center' do  %>
   <div class="max-w-5xl px-8 py-6 mb-2 bg-gray-100 group md:rounded-xl">
 
-    <% Candidat.all.each do |candidat| %>
+    <% Candidat.all.sort_by(&:position).each do |candidat| %>
       <span class="text-xs font-bold tracking-wider text-gray-500 uppercase"><%= candidat.prenom + ' ' + candidat.nom %> - <%= candidat.position == 1 ? 'candidat' : 'suppléant' %></span>
       <div class="flex items-center my-3">
         <%= image_tag candidat.photo, class:'flex-none object-cover rounded-full w-14 h-14 mr-3' %>

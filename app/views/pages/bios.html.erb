@@ -3,7 +3,7 @@
 
     <div class="transition duration-500 ease-in-out transform mb-14 hover:-translate-x-1"><%= link_to '← Retour', root_path, class:"text-asfe-blue-light" %></div>
 
-    <% Candidat.all.each do |candidat| %>
+    <% Candidat.all.sort_by(&:position).each do |candidat| %>
       <div class="mb-16">
         <div class="mx-auto md:flex max-w-7xl">
           <%= image_tag candidat.photo, class:'flex-none object-cover rounded-full hidden md:block w-28 h-28 mr-6' %>
