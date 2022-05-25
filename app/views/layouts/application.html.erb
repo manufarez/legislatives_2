@@ -3,6 +3,22 @@
   <head>
     <title><%= Candidat.first.prenom + ' ' + Candidat.first.nom + " 2022" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="title" content="<%= Candidat.first.prenom + ' ' + Candidat.first.nom + " 2022" %>">
+    <meta name="description" content="<%=  Slogan.first.principal %>">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="<%= root_path %>">
+    <meta property="og:title" content="<%= Candidat.first.prenom + ' ' + Candidat.first.nom + " 2022" %>">
+    <meta property="og:description" content="<%=  Slogan.first.principal %>">
+    <meta property="og:image" content="<%=  Slogan.first.image_homepage %>">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="<%= root_path %>">
+    <meta property="twitter:title" content="<%= Candidat.first.prenom + ' ' + Candidat.first.nom + " 2022" %>">
+    <meta property="twitter:description" content="<%=  Slogan.first.principal %>">
+    <meta property="twitter:image" content="<%=  Slogan.first.image_homepage %>">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
